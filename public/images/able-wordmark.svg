@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1168 784" role="img" aria-labelledby="title">
+  <title id="title">ABLE — Code, Edit, Data</title>
+  <defs>
+    <radialGradient id="navy" cx="50%" cy="50%" r="75%">
+      <stop stop-color="#0b3048"/>
+      <stop offset="1" stop-color="#031827"/>
+    </radialGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c97ff"/>
+      <stop offset="1" stop-color="#0876ed"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#navy)" d="M0 0h1168v784H0z"/>
+  <g font-family="Arial Black,Arial,Helvetica,sans-serif" font-size="242" font-weight="900" letter-spacing="-13">
+    <text x="255" y="453" fill="#fff">A</text>
+    <text x="454" y="453" fill="url(#blue)">BL</text>
+    <text x="769" y="453" fill="#fff">E</text>
+  </g>
+  <text x="584" y="514" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="500" letter-spacing="14">CODE <tspan fill="#0c90ff">•</tspan> EDIT <tspan fill="#0c90ff">•</tspan> DATA</text>
+</svg>
