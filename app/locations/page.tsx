@@ -4,8 +4,8 @@ import { courses } from "../courses";
 import { siteOrigin } from "../site-config";
 
 export const metadata: Metadata = {
-  title: "Beginner Courses in Johannesburg & Online South Africa | ABLE",
-  description: "Explore ABLE beginner coding, video editing and data courses for learners in Johannesburg, Randburg, Sandton, Rosebank, Cape Town and across South Africa. Online learning is available; ask about in-person classes.",
+  title: "Coding & Video Editing Courses in Johannesburg | ABLE",
+  description: "Explore beginner coding, Python, video editing and data analytics courses. Join ABLE online from Johannesburg, Randburg, Sandton and across South Africa.",
   alternates: {canonical: "/locations"},
   openGraph: {title:"ABLE courses for Johannesburg & South Africa",description:"Beginner coding, video editing and data courses. Learn online or ask about in-person availability.",url:siteOrigin+"/locations"},
 };
@@ -25,6 +25,6 @@ export default function LocationsPage() {
     </section>
     <section className="location-courses" id="courses-by-location"><div className="container"><div className="section-heading"><p className="eyebrow">PICK YOUR COURSE</p><h2>What would you like to build?</h2><p>Four weeks · two 90-minute sessions per week · up to 10 learners.</p></div><div className="location-course-grid">
       {courses.map(course => <Link href={"/"+course.slug} key={course.slug} className={"location-course "+course.accent}><span>BEGINNER COURSE</span><h3>{course.name}</h3><p>{course.tagline}</p><strong>Explore & enquire →</strong></Link>)}
-    </div></div></section>
+    </div><div className="location-search-content"><h2>Beginner courses for Johannesburg learners</h2><p>Want to learn to code in Johannesburg? ABLE CODE introduces Python programming and a first project. Want to learn video editing? ABLE EDIT takes you from raw clips through cuts, sound, titles and export. ABLE DATA introduces Excel, data cleaning, charts and a simple dashboard.</p><p>Join an online class from Johannesburg, Randburg, Sandton, Rosebank, Cape Town or another part of South Africa. If you prefer to learn in person, tell us your area when you enquire and we will confirm the available format and location.</p></div></div></section>
   </main>;
 }

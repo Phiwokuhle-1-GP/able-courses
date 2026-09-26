@@ -25,7 +25,7 @@ export default async function CoursePage({ params }: { params: Promise<{slug: st
   const course = getCourse(slug);
   if (!course) notFound();
   if (slug !== course.slug) permanentRedirect("/"+course.slug);
-  const schema = { "@context": "https://schema.org", "@type": "Course", name: course.name, description: course.description, provider: { "@type": "Organization", name: "ABLE" }, url: siteOrigin+"/"+course.slug, educationalLevel: "Beginner" };
+  const schema = { "@context": "https://schema.org", "@type": "Course", name: course.searchHeading, description: course.description, provider: { "@type": "Organization", name: "ABLE", url: siteOrigin }, url: siteOrigin+"/"+course.slug, educationalLevel: "Beginner", inLanguage: "en-ZA" };
   return <main className={"course-page "+course.accent}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <section className="course-hero"><div className="container hero-layout">
@@ -46,6 +46,8 @@ export default async function CoursePage({ params }: { params: Promise<{slug: st
     <section className="format-section"><div className="container format-layout"><div><p className="eyebrow">THE FORMAT</p><h2>A manageable way to begin.</h2><p>{course.forWhom}</p></div><div className="format-facts"><div><strong>4 weeks</strong><span>Short introduction course</span></div><div><strong>2 sessions / week</strong><span>90 minutes each</span></div><div><strong>Up to 10 learners</strong><span>Small group support</span></div><div><strong>Online or in person</strong><span>Ask about the next available class</span></div></div></div></section>
 
     <section className="course-locations container"><div><p className="eyebrow">WHERE YOU CAN LEARN</p><h2>Learn from Johannesburg or anywhere in South Africa.</h2><p>Online classes are an option for learners in Randburg, Sandton, Rosebank, Cape Town and beyond. Tell us your area when you enquire; we&apos;ll confirm any current in-person availability.</p></div><Link href="/locations">See locations & formats →</Link></section>
+
+    <section className="course-search-content container"><h2>{course.searchHeading}</h2><p>{course.searchCopy}</p><div className="course-questions">{course.questions.map(({question, answer}) => <div key={question}><h3>{question}</h3><p>{answer}</p></div>)}</div></section>
 
     <section className="enquire-section" id="enquire"><div className="container enquiry-layout"><div><p className="eyebrow">READY TO TRY IT?</p><h2>Ask about your next class.</h2><p>Tell us how to reach you. We&apos;ll reply with availability and the next step. No payment is taken here.</p><div className="fee"><span>Course fee</span><strong>R1,500</strong><small>Four-week introduction course</small></div></div><EnquiryForm course={course} /></div></section>
   </main>;

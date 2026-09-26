@@ -6,8 +6,8 @@ import PageTracker from "./page-tracker";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
-  title: "ABLE | Beginner Courses for Johannesburg & South Africa",
-  description: "Explore beginner coding, video editing and data analytics courses for Johannesburg, Randburg, Sandton, Rosebank, Cape Town and online learners across South Africa.",
+  title: "ABLE | Coding, Video Editing & Data Courses in Johannesburg",
+  description: "Learn to code, edit videos or analyse data with beginner courses from ABLE. Online classes for Johannesburg, Randburg, Sandton and learners across South Africa.",
   alternates: { canonical: "/" },
   robots: { index: false, follow: false },
   openGraph: { type: "website", siteName: "ABLE", title: "ABLE | Beginner Courses", description: "Learn to code, edit video and work with data. Build something real with ABLE.", url: siteOrigin },
